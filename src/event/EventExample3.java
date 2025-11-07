@@ -12,7 +12,7 @@ public class EventExample3 extends JFrame implements ActionListener {
     public EventExample3() {
         setSize(500, 500);
 
-        jButton.addActionListener(new ListenerClass());
+        jButton.addActionListener(this);
         add(jButton);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
