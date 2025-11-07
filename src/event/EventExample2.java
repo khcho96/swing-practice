@@ -5,11 +5,11 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class EventExample1 extends JFrame {
+public class EventExample2 extends JFrame {
 
     private JButton jButton = new JButton("버튼");
 
-    public EventExample1() {
+    public EventExample2() {
         setSize(500, 500);
 
         jButton.addActionListener(new ListenerClass());
@@ -19,15 +19,15 @@ public class EventExample1 extends JFrame {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
-        new EventExample1();
+    class ListenerClass implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent event) {
+            System.out.println("호출!");
+        }
     }
-}
 
-class ListenerClass implements ActionListener {
-
-    @Override
-    public void actionPerformed(ActionEvent event) {
-        System.out.println("호출!");
+    public static void main(String[] args) {
+        new EventExample2();
     }
 }
